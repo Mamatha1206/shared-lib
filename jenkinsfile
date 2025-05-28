@@ -4,10 +4,17 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Mamatha1206/shared-lib.git'
+            }
+        }
+
         stage('Maven Build') {
             steps {
-                mavenBuild()
+                buildMaven()
             }
         }
     }
 }
+
