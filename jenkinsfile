@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Mamatha1206/shared-lib.git'
+                git url 'https://github.com/Mamatha1206/shared-lib.git',branch:'main'
             }
         }
 
